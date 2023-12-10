@@ -48,3 +48,31 @@
 <p>***La méthode getObstacleLePlusProche est utilisée pour obtenir l'obstacle le plus proche du véhicule.</p>
 <p>***Si un obstacle est détecté dans la zone définie devant le véhicule, une force d'évasion est appliquée pour éviter la collision.</p>
 <p>***La force résultante est renvoyée pour être appliquée au véhicule.</p>
+<br/>
+<h4>Garder ses distances avec les autres: comportement séparation quand on est derrière.</h4>
+<p>***La méthode separate est appelée dans la fonction principale applyBehaviors pour chaque véhicule.</p>
+<p>***Elle prend en paramètre le tableau de tous les autres véhicules (boids).</p>
+<p>***La variable desiredseparation définit la distance minimale souhaitée entre les véhicules pour éviter la collision.</p>
+<p>***La boucle parcourt tous les autres véhicules pour calculer la distance et la direction par rapport au véhicule actuel.</p>
+<p>***Si la distance est inférieure à la séparation souhaitée, une force de séparation est calculée en ajoutant la direction inverse pondérée par la distance.</p>
+<br/>
+<h3>Curseurs pour régler les paramètres</h3>
+<p>***<b>avoidanceForceMultiplierSlider</b> : C'est le curseur associé à un coefficient multiplicateur pour la force d'évitement d'obstacles. Il va de 0 à 2, avec une valeur initiale de 0.5 et un pas de 0.01.</p>
+<p>***<b>vitesseVehiculesSlider</b> : C'est le curseur associé à la vitesse des véhicules. Il va de 1 à 10, avec une valeur initiale de 4 et un pas de 0.1.</p>
+<br/>
+<h3>Tous les véhicules doivent éviter les obstacles</h3>
+<p>J'ai utilisé la fonction avoid, qui calcule la force nécessaire pour éviter les obstacles environnants. Cette force est ensuite appliquée au véhicule. L'idée est que chaque véhicule prend en compte la présence d'obstacles et ajuste son mouvement pour éviter les collisions.<br/>
+Cette fonction est appelée pour chaque véhicule dans la boucle de dessin (draw), contribuant ainsi à l'effet global où tous les véhicules interagissent avec les obstacles pour éviter les collisions.</p>
+<br/>
+<h3>En tapant une touche ou en cliquant avec la souris, on change le comportement des suiveurs</h3>
+<p>Lorsque la touche "l" est pressée, la variable serpentActive est inversée, ce qui active ou désactive le mode serpent. En conséquence, la démo est définie sur "snake", entraînant un changement dans le comportement des véhicules pour suivre le leader à la queue leu leu.</p>
+<img width="677" alt="Capture1" src="https://github.com/hajarmanyani/leader_game_I2A/assets/93662714/df008110-2704-466f-b737-bba030d067e8">
+<br/>
+<h3>Les véhicules ayant le comportement "wander"</h3>
+<p>Le comportement "wander" (errance aléatoire) dans le contexte du code s'exprime principalement dans la fonction wander de la classe Vehicle. </p>
+<p>***On génère un vecteur aléatoire qui représente une direction dans laquelle le véhicule va errer.</p>
+<p>***On normalise ce vecteur pour assurer une magnitude constante.</p>
+<p>***On le multiplie par le rayon de l'errance (wanderRadius) pour étendre la portée de l'errance.</p>
+<p>***On ajuste la direction finale en utilisant la fonction seek pour diriger le véhicule vers le nouveau point.</p>
+<br/>
+
