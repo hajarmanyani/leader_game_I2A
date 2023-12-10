@@ -88,6 +88,9 @@ Cette fonction est appelée pour chaque véhicule dans la boucle de dessin (draw
 <h3>Ajouter le son au jeu</h3>
 <img width="540" alt="Capture2" src="https://github.com/hajarmanyani/leader_game_I2A/assets/93662714/2fb3ee2b-dff8-4904-89e3-802bb136ac5d">
 <img width="540" alt="Capture3" src="https://github.com/hajarmanyani/leader_game_I2A/assets/93662714/8bc1a142-e468-4824-8801-07c19bddb408">
+<br/>
+<h3>Demo</h3>
+<img width="706" alt="Capture3" src="https://github.com/hajarmanyani/leader_game_I2A/assets/93662714/c58a1c6a-9fac-40d7-865d-a26bd5da0055">
 
 
 
