@@ -75,4 +75,19 @@ Cette fonction est appelée pour chaque véhicule dans la boucle de dessin (draw
 <p>***On le multiplie par le rayon de l'errance (wanderRadius) pour étendre la portée de l'errance.</p>
 <p>***On ajuste la direction finale en utilisant la fonction seek pour diriger le véhicule vers le nouveau point.</p>
 <br/>
+<h3>Les véhicules doivent être repoussés par les bords de l’écran (comportement boundaries)</h3>
+<p>Le comportement "boundaries" vise à empêcher les véhicules de sortir de l'écran en les repoussant lorsqu'ils atteignent les bords. Voici une explication basée sur le code que vous avez fourni :</p>
+<img width="540" alt="Capture1" src="https://github.com/hajarmanyani/leader_game_I2A/assets/93662714/23f2625c-3000-4616-838a-c4ea843495d8">
+<p>***On vérifie si le véhicule dépasse les bords de l'écran dans chaque direction (gauche, droite, haut, bas).</p>
+<p>***Si c'est le cas, on crée un vecteur "desired" qui représente la direction dans laquelle le véhicule doit être repoussé pour rester à l'intérieur de l'écran.</p>
+<p>***On normalise ce vecteur pour assurer une magnitude constante.</p>
+<p>***On le multiplie par la vitesse maximale du véhicule pour définir l'intensité de la force de repoussement.</p>
+<p>***On calcule finalement la force nécessaire en soustrayant la vitesse actuelle du véhicule de la direction désirée, puis en limitant cette force à la valeur maximale autorisée (maxForce).</p>
+<p>***On applique cette force au véhicule.</p>
+<br/>
+<h3>Ajouter le son au jeu</h3>
+<img width="540" alt="Capture2" src="https://github.com/hajarmanyani/leader_game_I2A/assets/93662714/2fb3ee2b-dff8-4904-89e3-802bb136ac5d">
+<img width="540" alt="Capture3" src="https://github.com/hajarmanyani/leader_game_I2A/assets/93662714/8bc1a142-e468-4824-8801-07c19bddb408">
+
+
 
