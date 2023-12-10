@@ -36,3 +36,15 @@
 <p>***Elle ajuste la vitesse désirée en fonction de la distance entre le leader et la cible. Si la distance est inférieure à un certain seuil (slowRadius), la vitesse est réduite progressivement.</p>
 <p>***Ensuite, la force est réglée à une magnitude égale à la vitesse désirée et est limitée par le maximum de force (this.maxForce). Cette force est renvoyée pour être utilisée dans le calcul de la nouvelle accélération du leader.</p>
 <p>Cette partie du code permet au leader de suivre la souris en utilisant un comportement arrive pour ajuster sa vitesse en fonction de la distance à la cible, assurant ainsi un mouvement en douceur et fluide.</p></b>
+<br/>
+<h4>Rester avec le leader : comportement arriver sur une cible (le leader, ou plutôt un point derrière le leader est la cible)</h4>
+<p>***Plutôt que de suivre directement la position du leader, chaque véhicule suivant choisit comme cible un point situé derrière le leader.</p>
+<p>***Cette cible est déterminée par la méthode arrive avec la position du leader comme argument</p>
+<p>***Les véhicules suivants appliquent le comportement d'arrivée à cette cible, ce qui les incite à se déplacer vers ce point derrière le leader.</p>
+<br/>
+<h4>Ne pas se mettre devant le leader: comportement évasion quand on est dans la zone devant le leader</h4>
+<p>***La méthode avoid est appelée pour chaque véhicule dans la fonction principale applyBehaviors.</p>
+<p>***La position du point à l'avant du véhicule (pointAuBoutDeAhead) est calculée en utilisant la vélocité du véhicule.</p>
+<p>***La méthode getObstacleLePlusProche est utilisée pour obtenir l'obstacle le plus proche du véhicule.</p>
+<p>***Si un obstacle est détecté dans la zone définie devant le véhicule, une force d'évasion est appliquée pour éviter la collision.</p>
+<p>***La force résultante est renvoyée pour être appliquée au véhicule.</p>
